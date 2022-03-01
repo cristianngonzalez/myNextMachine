@@ -1,4 +1,9 @@
 import React , { useState , useEffect } from "react";
+//Importamos los hooks de redux
+import { useDispatch , useSelector } from "react-redux";
+//Importar las actions
+import{ selectCpuBrand } from '../../actions/index';
+
 //Styles
 import './ChooseCpuComponent.css';
 
@@ -16,6 +21,10 @@ import intelLogoAsset from '../../assets/intelLogo.svg';
 import amdLogoAsset from '../../assets/amdLogo.svg';
 
 export function ChooseCpuComponent(){
+
+  //Distpach
+  const dispatch = useDispatch();
+
   return(
     <div>
       <h1>Choose Cpu</h1>
@@ -48,11 +57,17 @@ export function ChooseCpuComponent(){
           cuando este ubicado en el index 0 o 2*/
           switch(swiper.activeIndex){
             //Case 0 es seleccionar Intel
-            case 0: {console.log('Intel')}break;
+            case 0: {
+              dispatch(selectCpuBrand('Intel'));
+            }break;
             //Case 1 es no seleccionar nada
-            case 1: {console.log('Selecciona uno')}break;
+            case 1: {
+              dispatch(selectCpuBrand(false));
+            }break;
             //Case 2 es seleccionar Amd
-            case 2: {console.log('Amd')}break;
+            case 2: {
+              dispatch(selectCpuBrand('Amd'));
+            }break;
           }
         }}
 
