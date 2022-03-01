@@ -1,0 +1,25 @@
+.swiperChooseCpu{
+  width: 100%;
+}
+
+.swiperSlideChooseCpu{
+  max-width: 100px;
+  margin-bottom: 50px;
+  /*Ponemos la opacidad baja, la ponemos en 100 cuando este activo*/
+  opacity: 50%;
+}
+
+.swiperSlideChooseCpuCenter{
+  max-width: 170px;
+  opacity: 50%;
+}
+
+.swiper-slide-active{
+  opacity: 100%;
+}
+
+
+
+.chooseCpuLogo{
+  width: 100px;
+}

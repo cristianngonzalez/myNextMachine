@@ -1,0 +1,13 @@
+header{
+  width: 100%;
+  height: 100px;
+  padding: 0;
+  position: relative;
+}
+
+#logoHeaderComponent{
+  width: 150px;
+  position: absolute;
+  top: 30px;
+  left: 100px;
+}
